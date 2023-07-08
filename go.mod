@@ -22,14 +22,14 @@ require (
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/gocql/gocql v0.0.0-20181124151448-70385f88b28b
 	github.com/lib/pq v1.1.1
-	github.com/magiconair/properties v1.8.0
+	github.com/magiconair/properties v1.8.5
 	github.com/mattn/go-sqlite3 v2.0.1+incompatible
 	github.com/minio/minio-go v6.0.14+incompatible
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/pingcap/errors v0.11.5-0.20211224045212-9687c2b0f87c
 	github.com/pingcap/kvproto v0.0.0-20220705053936-aa9c2d20cd2a
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/spf13/cobra v1.0.0
+	github.com/spf13/cobra v1.2.1
 	github.com/tecbot/gorocksdb v0.0.0-20191217155057-f0fad39f321c
 	github.com/tikv/client-go/v2 v2.0.1-0.20220720064224-aa9ded37d17d
 	go.mongodb.org/mongo-driver v1.11.3
@@ -43,6 +43,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/feature/dynamodb/attributevalue v1.10.0
 	github.com/aws/aws-sdk-go-v2/feature/dynamodb/expression v1.4.26
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.17.1
+	github.com/rqlite/gorqlite v0.0.0-20230310040812-ec5e524a562e
 	go.etcd.io/etcd/client/pkg/v3 v3.5.2
 	go.etcd.io/etcd/client/v3 v3.5.2
 )
@@ -97,7 +98,7 @@ require (
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/kr/pretty v0.2.1 // indirect
-	github.com/mattn/go-runewidth v0.0.9 // indirect
+	github.com/mattn/go-runewidth v0.0.13 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe // indirect
@@ -109,8 +110,8 @@ require (
 	github.com/prometheus/common v0.26.0 // indirect
 	github.com/prometheus/procfs v0.6.0 // indirect
 	github.com/remyoudompheng/bigfft v0.0.0-20200410134404-eec4a21b6bb0 // indirect
-	github.com/smartystreets/goconvey v0.0.0-20190330032615-68dc04aab96a // indirect
-	github.com/spf13/pflag v1.0.3 // indirect
+	github.com/rivo/uniseg v0.2.0 // indirect
+	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/stathat/consistent v1.0.0 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
 	github.com/tikv/pd/client v0.0.0-20220307081149-841fa61e9710 // indirect
@@ -136,7 +137,6 @@ require (
 	google.golang.org/grpc v1.53.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
-	gopkg.in/ini.v1 v1.42.0 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 	gopkg.in/tomb.v2 v2.0.0-20161208151619-d5d1b5820637 // indirect
 )
