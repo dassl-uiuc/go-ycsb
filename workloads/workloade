@@ -41,6 +41,8 @@ requestdistribution=uniform
 
 maxscanlength=1
 
+fieldcount=1
+
 scanlengthdistribution=uniform
 
 

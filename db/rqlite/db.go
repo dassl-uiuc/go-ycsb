@@ -120,7 +120,6 @@ func (db *rqliteDB) Insert(ctx context.Context, table string, key string, values
 		Query:     query,
 		Arguments: args,
 	}
-	fmt.Print(paramQuery)
 	_, err = db.c.QueueOneParameterized(paramQuery)
 	return err
 }

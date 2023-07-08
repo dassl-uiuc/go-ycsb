@@ -32,6 +32,8 @@ updateproportion=0
 scanproportion=0
 insertproportion=0
 
+fieldcount=1
+
 requestdistribution=uniform
 
 

@@ -612,7 +612,7 @@ func (coreCreator) Create(p *properties.Properties) (ycsb.Workload, error) {
 	c.fieldCount = p.GetInt64(prop.FieldCount, prop.FieldCountDefault)
 	c.fieldNames = make([]string, c.fieldCount)
 	for i := int64(0); i < c.fieldCount; i++ {
-		c.fieldNames[i] = fmt.Sprintf("field%d", i)
+		c.fieldNames[i] = fmt.Sprintf("%d", i)
 	}
 	c.fieldLengthGenerator = getFieldLengthGenerator(p)
 	c.recordCount = p.GetInt64(prop.RecordCount, prop.RecordCountDefault)
