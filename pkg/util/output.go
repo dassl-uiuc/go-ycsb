@@ -5,9 +5,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"strconv"
 	"strings"
 
 	"github.com/olekukonko/tablewriter"
+	"gopkg.in/yaml.v3"
 )
 
 // output style
@@ -15,6 +17,7 @@ const (
 	OutputStylePlain = "plain"
 	OutputStyleTable = "table"
 	OutputStyleJson  = "json"
+	OutputStyleYaml  = "yaml"
 )
 
 // RenderString renders headers and values according to the format provided
@@ -59,6 +62,31 @@ func RenderJson(w io.Writer, headers []string, values [][]string) {
 		data = append(data, line)
 	}
 	outStr, err := json.Marshal(data)
+	if err != nil {
+		fmt.Fprintln(w, err)
+		return
+	}
+	fmt.Fprintln(w, string(outStr))
+}
+
+func RenderYaml(w io.Writer, headers []string, values [][]string) {
+	if len(values) == 0 {
+		return
+	}
+	data := make(map[string](map[string]float64))
+	for _, value := range values {
+		line := make(map[string]float64, 0)
+		var op string
+		for i, header := range headers {
+			if i == 0 {
+				op = value[0]
+				continue
+			}
+			line[header], _ = strconv.ParseFloat(value[i], 32)
+		}
+		data[op] = line
+	}
+	outStr, err := yaml.Marshal(data)
 	if err != nil {
 		fmt.Fprintln(w, err)
 		return

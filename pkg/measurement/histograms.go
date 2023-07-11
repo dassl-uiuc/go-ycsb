@@ -86,6 +86,8 @@ func (h *histograms) Output(w io.Writer) error {
 		util.RenderJson(w, header, lines)
 	case util.OutputStyleTable:
 		util.RenderTable(w, header, lines)
+	case util.OutputStyleYaml:
+		util.RenderYaml(w, header, lines)
 	default:
 		panic("unsupported outputstyle: " + outputStyle)
 	}
